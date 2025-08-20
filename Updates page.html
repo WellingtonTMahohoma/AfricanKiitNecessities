@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta ="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+    <style>
+        body,html{
+            margin:0;
+            padding:0;
+            background-color:rgb(255, 255, 255);
+        }
+    /* TOP BAR*/
+        /*LEFT SIDE*/
+        #top_bar{
+            width:100%;
+            border: 2px solid black;
+            overflow:auto;
+            padding-left:0px;
+            margin:0px;
+            background-color: black;
+            color:aliceblue;
+        }
+        .fa-square-whatsapp,.fa-square-instagram,.fa-square-facebook{
+            color:aliceblue;
+        }
+        #left_top{
+            
+        }
+        #list_left_top{
+            list-style-type:none;
+            margin:0px;
+        }
+        #list_left_top li{
+            text-align:center;
+            float:left;
+        }
+        #list_left_top a{
+            text-decoration:none;
+            color:aliceblue;
+        }
+        #phone_num{
+            padding-right:15px;
+        }
+        /*right side*/
+        #icons_right_top{
+            margin:0px;
+        }
+        #icons_right_top li{
+            align-items: center;
+            float:right;
+            list-style-type:none;
+            padding-right:10px;
+        }
+    /*HEADER*/
+    #top_header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+#menu a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+#menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e91e63;
+  transition: width 0.3s ease;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}
+
+button{
+    padding:10px;
+    border:none;
+    background-color: #e91e63;
+    font-weight: 400;
+    font-size: 16px;
+}
+button:hover{
+    background-color: #eee;
+}
+
+#top_header.scrolled {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 5px 20px;
+}
+
+        #header{
+            display:flex;
+            justify-content:space-between;
+            width:100%;
+            background-color: aliceblue;
+        }
+        /*MAIN LOGO*/
+        #main_logo{
+            width:auto;
+        }
+        /*MENU*/
+        #menu{
+            margin:0px;
+            float:right;
+        }
+        #menu ul{
+            list-style-type:none;
+            justify-content:space-between;
+        }
+        #menu ul li{
+            text-align:center;
+            float:left;
+            padding-left: 20px;
+        }
+        #menu ul li a{
+            text-decoration:none;
+            color:black;
+            font-weight: bolder;
+        }
+        #menu ul li
+        #head_2{
+            padding-left:2.5%;
+        }
+        #head_3{
+            padding-left:5%;
+        }
+        #head_1,#head_2,#head_3{
+            font-family:display;
+            font-size: larger;
+            text-shadow: #717171;
+            text-decoration-thickness:inherit;
+            font-weight: bolder;
+        }
+
+        #logo_image{
+            width:50px;
+            height:auto;
+        }
+        .logo_pic{
+            display:flex;
+        }
+        /*BUTTON*/
+        #menu ul li button{
+            padding-left: 15px; 
+            padding-right:15px;
+        }
+
+
+
+        @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+        }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            }
+
+        .main {
+            flex: 1;
+            }
+
+        /* Modal styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 2000; 
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto; 
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#menu ul li a.active {
+  color: #ff6600;
+  font-weight: bold;
+  border-bottom: 2px solid #ff6600;
+  background: #fff6e6;
+}
+
+#Updateshead{
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.update-img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 1em auto;
+    }
+
+
+    /*FOOTER*/
+
+    footer {
+            margin-bottom: 0;
+            margin-top:0;
+            background-color: #222;
+            color: #eee;
+            padding: 40px 20px 20px;
+            font-family: 'Segoe UI', sans-serif;
+            }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            }
+
+        .footer-section {
+            flex: 1 1 200px;
+            }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+            color: #f5f5f5;
+            }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+            }
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            }
+
+        .footer-section ul li a:hover {
+            color: #fff;
+            }
+
+        .social-icons a {
+            margin-right: 10px;
+            color: #ccc;
+            font-size: 20px;
+            text-decoration: none;
+            }
+
+        .social-icons a:hover {
+            color: #fff;
+            }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #aaa;
+            }
+
+        
+ #Updateshead{
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header_2 {
+      color: #ff6600; /* Orange */
+    }
+    </style>
+</head>
+<body>
+<body>
+<div class="page-wrapper">
+<div id="top_header">
+    <div id="top_bar">
+        <div id="left_top">
+            <ul id="list_left_top">
+                <li id="phone_num"><i class="fa-solid fa-phone"></i><a href="tel:+917682060013">7682060013</a></li>
+                <li id="email_id"><i class="fa-solid fa-envelope"></i><a href="mailto:wellingtontmahohoma@gmail.com">wellingtontmahohoma@gmail.com</a></li>
+            </ul>
+        </div>
+        <div id="right_top">
+            <ul id="icons_right_top">
+                <li><a href="#"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="header">
+    <div class="logo_pic">
+    <img id="logo_image" src="C:\Users\welli\OneDrive\Pictures\Documents\KIIT NECECITIES\images\Africa-Download-Transparent-PNG-Image.png">
+        <div id="main_logo">
+            <header id="head_1">African</header>
+            <header id="head_2">Kiit</header>
+            <header id="head_3">Necessecities</header>
+        </div>
+    </div>
+        <div id="menu">
+            <ul>
+                <li><a href="Main_page.html" >Home</a></li>
+                <li><a href="">Market</a></li>
+                <li><a href="Updates page.html" class="active">Updates</a></li>
+                <li><a href="">Events and Sporting</a></li>
+                <li><button id="loginBtn">Login</button></li>
+                <li><button id="signupBtn">Sign Up</button></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+
+
+    <div id="Updateshead" >
+    <h1 class="header_2">Latest Updates</h1>
+    </div>
+
+    <main class="updates-container">
+    <article class="update-card">
+      <h2>🆕 New Product Launch</h2>
+      <p><strong>Date:</strong> August 20, 2025</p>
+      <p>We’re excited to introduce our new eco-friendly baskets made by local artisans. Available now in the Market section!</p>
+    </article>
+
+    <article class="update-card">
+      <h2>🎉 Community Event</h2>
+      <p><strong>Date:</strong> August 25, 2025</p>
+      <p>Join us for a cultural showcase at KIIT grounds. Music, food, and crafts from across Africa!</p>
+    </article>
+
+    <article class="update-card">
+      <h2>📢 Site Update</h2>
+      <p><strong>Date:</strong> August 18, 2025</p>
+      <p>We’ve improved mobile responsiveness and added a sticky footer. Let us know what you think!</p>
+    </article>
+
+    <article class="update-card">
+  <img src="C:\Users\welli\OneDrive\Pictures\Animal Wallpaper\653980.jpg" alt="Eco-friendly baskets" class="update-img" />
+  <div class="update-content">
+    <h2>🆕 New Product Launch</h2>
+    <p><strong>Date:</strong> August 20, 2025</p>
+    <p>We’re excited to introduce our new eco-friendly baskets made by local artisans. Available now in the Market section!</p>
+  </div>
+</article>
+  </main>
+
+
+
+    <footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>We help businesses of every kind grow their visibility through smart, impactful advertising</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></i></a>
+        <a href="#"><i class="fa- fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 AFRICAN-KIIT-NECESSITIES Inc. All rights reserved.</p>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
